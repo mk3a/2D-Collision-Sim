@@ -7,4 +7,3 @@ Check out the demo at http://mk3a.github.io/2dColSim.html
 ###Features to be added
 * Electric Charge Simulator
 * Interactivity
-* 
