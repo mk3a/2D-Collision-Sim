@@ -4,8 +4,8 @@ float forceConst=150;
 float massDensity=0.2;
 final int nBalls=10;
 float maxR=60,minR=5;
-float maxV=5,minV=0;
-float epsilon=0.001;
+float maxV=7,minV=0;
+float epsilon=0.000001;
 class ball{
     float radius;
     float mass;
@@ -99,7 +99,8 @@ boolean detCol(ball a, ball b){
     PVector d=distBtwn(a,b);
     if (d.mag()<(a.radius+b.radius)){
         d.normalize();
-        b.pos=PVector.add(a.pos,d.mult(b.radius+a.radius));
+        d.mult((a.radius+b.radius));
+        b.pos=PVector.add(a.pos,d);
         return true;
     }
     else return false;
